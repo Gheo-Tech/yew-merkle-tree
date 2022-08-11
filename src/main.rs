@@ -250,7 +250,7 @@ impl Node {
             false => "has-text-link",
         };
         html! {
-            <div class="columns is-gapless hover-border is-vcentered" style={style}>
+            <div class="columns is-gapless hover-border is-vcentered is-mobile" style={style}>
                <div class={classes!(classes, highlight)}>
                    {&self.hash}
                </div>
@@ -326,7 +326,7 @@ impl Component for MerkleTree {
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
         <div class="section">
-            <div class="columns box is-mobile">
+            <div class="columns box">
                 <div class="column is-4 label has-text-centered">
                     {"Add transaction to the Merkle Tree:"}
                 </div>
